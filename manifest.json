@@ -1,18 +1,17 @@
 {
-    "manifest_version": 2,
-    "name": "Timer Extension",
-    "version": "1.0",
-    "description": "A timer extension that rings a beep when the set time elapses.",
-    "icons": {
-      "128": "alalrmimg.png"
-    },
-    "browser_action": {
-      "default_popup": "popup.html"
-    },
-    "background": {
-      "scripts": ["background.js"],
-      "persistent": false
-    },
-    "permissions": ["alarms"]
-  }
-  
+  "manifest_version": 2,
+  "name": "Timer Extension",
+  "version": "1.0",
+  "description": "A timer extension that rings a beep when the set time elapses.",
+  "icons": {
+    "128": "alalrmimg.png"
+  },
+  "browser_action": {
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "permissions": ["alarms"]
+}
