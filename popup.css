@@ -33,3 +33,7 @@ button {
 button + button {
   margin-top: 10px;
 }
+
+.timer-container {
+  justify-content: right;
+}
