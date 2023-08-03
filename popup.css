@@ -2,9 +2,12 @@ body {
   height: 500px;
   width: 500px;
   padding: 10px;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   font-family: Arial, sans-serif;
+  background-color: #f1f1f1;
 }
 
 h1 {
@@ -15,8 +18,6 @@ label,
 input {
   display: block;
   margin-bottom: 10px;
-  justify-content: center;
-  align-items: center;
 }
 
 button {
@@ -35,5 +36,22 @@ button + button {
 }
 
 .timer-container {
-  justify-content: right;
+  background-color: #007bff;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  color: #fff;
+}
+
+.timers-list {
+  margin-top: 20px;
+  padding: 10px;
+  border: 1px solid #54fa37;
+  border-radius: 4px;
+}
+
+.timers-list div {
+  margin-bottom: 5px;
 }

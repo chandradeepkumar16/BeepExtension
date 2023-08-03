@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html>
   <head>
     <title>Timer Extension</title>
@@ -18,6 +18,34 @@
 
       <button id="startTimer" class="startbtn">Start Timer</button>
       <button id="stopTimer" class="stopbtn">Stop Timer</button>
+    </div>
+  </body>
+</html> -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Timer Extension</title>
+    <link rel="stylesheet" href="popup.css" />
+    <script src="popup.js"></script>
+  </head>
+  <body>
+    <h1>Set Timer</h1>
+    <label for="title">Task Title:</label>
+    <input type="text" id="title" placeholder="Enter task title" />
+
+    <label for="time">Time (in seconds):</label>
+    <input type="number" id="time" placeholder="Enter time in seconds" />
+
+    <div class="timer-container">
+      <div id="timer">00:00</div>
+    </div>
+
+    <button id="startTimer" class="startbtn">Start Timer</button>
+    <button id="stopTimer" class="stopbtn">Stop Timer</button>
+
+    <div class="timers-list">
+      <!-- The saved timers will be displayed here -->
     </div>
   </body>
 </html>

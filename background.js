@@ -7,7 +7,7 @@ chrome.alarms.onAlarm.addListener(function (alarm) {
     beep.play();
     alarmInterval = setInterval(function () {
       beep.play();
-    }, 3000); // Play the beep every 3 seconds (adjust this as needed)
+    }, 3000); // Play the beep every 3 seconds
   }
 });
 
@@ -36,5 +36,11 @@ chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
     startAlarm(request.time);
   } else if (request.message === "stop") {
     stopAlarm();
+  } else if (request.message === "getTimers") {
+    // Retrieve the saved timers from chrome.storage
+    chrome.storage.local.get({ timers: [] }, function (result) {
+      sendResponse({ timers: result.timers });
+    });
+    return true;
   }
 });

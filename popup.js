@@ -4,6 +4,10 @@ document.addEventListener("DOMContentLoaded", function () {
   const timerContainer = document.getElementById("timer");
   let countdown; // Define the countdown variable outside the functions
 
+  chrome.runtime.sendMessage({ message: "getTimers" }, function (response) {
+    displayTimers(response.timers);
+  });
+
   startTimerButton.addEventListener("click", function () {
     const timeInSeconds = parseInt(document.getElementById("time").value, 10);
     if (!isNaN(timeInSeconds) && timeInSeconds > 0) {
